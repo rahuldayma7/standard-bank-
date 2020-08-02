@@ -32,9 +32,9 @@ with open('config_6August_unit.json') as f:
 #creating connection with ECAL database
 def mysql_connection():
     mysql_conn = MySQLdb.connect(host='dpa-aws-db.cvi8bjwlvz3a.us-west-2.rds.amazonaws.com',  
-           user='sb_readonly', 
-           passwd='dpa@1234',
-           db='dpau_test'
+           user='', 
+           passwd='',
+           db=''
            )
     return mysql_conn
 
@@ -42,8 +42,8 @@ def mysql_connection():
 def mssql_connection():
     mssql_conn = pypyodbc.connect("Driver={SQL Server Native Client 11.0};"
      "Server=192.168.2.6\MSSQLSERVERDEV;"
-     "Database=StandardBank;"
-     "uid=sa;pwd=admin@123")
+     "Database=;"
+     "uid=;pwd=")
     return mssql_conn
 
 file =pd.read_csv('unit_mapping.csv')
